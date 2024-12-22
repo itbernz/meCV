@@ -1,0 +1,52 @@
+export interface TimelineItem {
+  heading: string;
+  subheading: string;
+  date: string;
+  content: string;
+  bulletPoints?: string[];
+}
+
+export interface EducationItem extends TimelineItem {
+
+}
+
+export interface ExperienceItem extends TimelineItem {
+  skills?: Skill[];
+}
+
+export interface Skill {
+  id: string;
+  name: string;
+  rating: number;
+  text: string;
+  subSkills?: string[];
+}
+
+export interface SkillCategory {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  /**
+   * Maximum of 20 skills is supported.
+   */
+  skills: Skill[];
+}
+
+export interface LanguagePack {
+  /**
+   * This is the identifier which is used in the languages array and for definition of the object.
+   */
+  id: string;
+  name: string;
+  /**
+   * This is required for usage of <a href="https://github.com/lipis/flag-icons#usage">flag-icons library</a>.
+   * Use <a href="https://www.iso.org/obp/ui/#search/code/">ISO 3166-1-alpha-2 code</a> of the desired flag.
+   */
+  isoAlpha2: string;
+  heading: string;
+  subheading: string;
+  education: string;
+  experience: string;
+  skills: string;
+}

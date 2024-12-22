@@ -1,0 +1,24 @@
+{
+  "languages": ["de", "en"],
+  "defaultLanguage": "en",
+  "de": {
+    "id": "de",
+    "name": "Deutsch",
+    "isoAlpha2": "de",
+    "heading": "Title Of Website",
+    "subheading": "Subtitle",
+    "education": "Section 1",
+    "experience": "Section 2",
+    "skills": "Section 3"
+  },
+  "en": {
+    "id": "en",
+    "name": "English",
+    "isoAlpha2": "us",
+    "heading": "Axel Herrmann",
+    "subheading": "Software Engineer",
+    "education": "Education",
+    "experience": "Experience",
+    "skills": "Skills"
+  }
+}

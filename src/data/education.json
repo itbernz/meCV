@@ -1,0 +1,57 @@
+{
+  "de": [
+    {
+      "heading": "Heading",
+      "subheading": "Subheading",
+      "date": "09/2008 – 07/2012",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "bulletPoints": [
+        "badge"
+      ]
+    },
+    {
+      "heading": "Heading",
+      "subheading": "Subheading",
+      "date": "09/2008 – 07/2012",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "bulletPoints": [
+        "badge"
+      ]
+    },
+    {
+      "heading": "Heading",
+      "subheading": "Subheading",
+      "date": "09/2008 – 07/2012",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "bulletPoints": [
+        "badge"
+      ]
+    }
+  ],
+  "en": [
+    {
+      "heading": "Elementary School",
+      "subheading": "Berkenschule Holzgerlingen",
+      "date": "09/2008 – 07/2012",
+      "content": "Although I had no contact with computer science or technical subjects in elementary school, math quickly turned out to be my favorite subject."
+    },
+    {
+      "heading": "Abitur",
+      "subheading": "Schönbuch-Gymnasium Holzgerlingen",
+      "date": "09/2012 – 07/2020",
+      "bulletPoints": [
+        "Final Grade: 1,4"
+      ],
+      "content": "In addition to general education, I was able to gain my first experience in computer science here. I attended computer science classes from 11th year onwards."
+    },
+    {
+      "heading": "Software Engineering B.Sc.",
+      "subheading": "University of Stuttgart",
+      "date": "10/2020 – 04/2023",
+      "bulletPoints": [
+        "Expected Final Grade: 2.0"
+      ],
+      "content": "In contrast to the related computer science course, I was able to gain some more practical experience here. These small programming projects have inspired me the most during my studies so far."
+    }
+  ]
+}
