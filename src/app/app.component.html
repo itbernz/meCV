@@ -1,0 +1,106 @@
+<main>
+  <div #background style="width: 100vw; height: 100vh; display: flex; position: fixed; z-index: -100">
+<!--    <img-->
+<!--      srcset= "../assets/avatar_600.png 600w,-->
+<!--               ../assets/avatar_1000x533.png 1000w,-->
+<!--               ../assets/avatar_1500x800.png 1500w,-->
+<!--               ../assets/avatar_2000x1066.png 2000w,-->
+<!--               ../assets/avatar_2500x1333.png 2500w,-->
+<!--               ../assets/avatar_3000x1600.png 3000w,-->
+<!--               ../assets/avatar_6000x3200.png 6000w"-->
+<!--      sizes="100vw"-->
+<!--      src="../assets/avatar_600.png"-->
+<!--      alt=""-->
+<!--      style="min-width:100vw; min-height:100vh; width: auto; height: auto; object-fit: cover;"-->
+<!--    />-->
+    <img width="6000" height="3200"
+      ngSrc="./assets/avatar/" ngSrcset="600w, 1000w, 1500w, 2000w, 2500w, 3000w, 6000w"
+      alt="" style="min-width:100vw; min-height:100vh; width: auto; height: auto; object-fit: cover;"/>
+  </div>
+
+  <div #lang_selector style="right: calc(2vh + 64px); top: 2vh; position: fixed; z-index: 1000; display: var(--display-side-elements)">
+    <p-speedDial [model]="dataService.languagesMenuItems" direction="down" showIcon="pi pi-language" class="language-speed-dial" buttonClassName="language-button"></p-speedDial>
+  </div>
+
+  <div style="position:relative; top: -30vh; display: table; height: 130vh; width: 100vw;">
+    <div style="display: table-cell; vertical-align: middle; text-align: center;">
+      <h1 id="main-heading">Axel Herrmann</h1>
+      <h2 id="main-subheading">Software Engineer</h2>
+    </div>
+  </div>
+
+  <div style="text-align: center">
+    <heading-card #education_card [heading]="dataService.languagePack.education" type="light" styleClass="alarm-clock-animated"></heading-card>
+    <p-timeline id="eduction-tl" [value]="dataService.education" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
+      <ng-template pTemplate="marker">
+        <span class="dot"></span>
+      </ng-template>
+      <ng-template pTemplate="content" let-educationItem>
+        <timeline-card type="light" [heading]="educationItem.heading" [subheading]="educationItem.subheading"
+                       [content]="educationItem.content" [bulletPoints]="educationItem.bulletPoints" styleClass="alarm-clock-animated">
+        </timeline-card>
+      </ng-template>
+      <ng-template pTemplate="opposite" let-educationItem>
+        <p-badge [value]="educationItem.date" size="large" styleClass="timeline-date-dark alarm-clock-animated"></p-badge>
+      </ng-template>
+    </p-timeline>
+
+    <heading-card #experience_card [heading]="dataService.languagePack.experience" type="dark" styleClass="alarm-clock-animated"></heading-card>
+    <p-timeline id="experience-tl" [value]="dataService.experience" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
+      <ng-template pTemplate="marker">
+        <span class="dot"></span>
+      </ng-template>
+      <ng-template pTemplate="content" let-experienceItem>
+        <timeline-card type="dark" [heading]="experienceItem.heading" [subheading]="experienceItem.subheading"
+                       [content]="experienceItem.content" [bulletPoints]="experienceItem.skills" styleClass="alarm-clock-animated">
+        </timeline-card>
+      </ng-template>
+      <ng-template pTemplate="opposite" let-experienceItem>
+        <p-badge [value]="experienceItem.date" size="large" styleClass="timeline-date-light alarm-clock-animated"></p-badge>
+      </ng-template>
+    </p-timeline>
+
+    <div #skills_section>
+      <heading-card [heading]="dataService.languagePack.skills" type="light"></heading-card>
+
+      <div #skills_container class="flex flex-nowrap justify-content-evenly" style="height: calc(85vh - 6rem); align-items: center; margin-bottom: 5vh; gap: 10vw; position: relative">
+        <skill-cat-card *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skill-cat-card>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 500px"></div>
+
+    <div class="flex flex-wrap justify-content-evenly" style="align-items: center; gap: 3rem; position: relative; width: var(--main-content-width); margin: 0 var(--main-content-side-margin)">
+      <skill-cat-card-2 *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skill-cat-card-2>
+    </div>
+
+<!--    <div style="margin-bottom: 500px"></div>-->
+
+    <div style="margin-bottom: 500px"></div>
+
+    <div style="width: var(--main-content-width); margin: 0 var(--main-content-side-margin)">
+      <skills-grid *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skills-grid>
+    </div>
+
+    <div style="margin-bottom: 500px"></div>
+
+    <div style="width: var(--main-content-width); margin: 0 var(--main-content-side-margin); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 1rem">
+      <skills-card *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skills-card>
+    </div>
+
+    <!-- Inspo: https://codepen.io/william-goldsworthy/pen/JzVajj found on https://freefrontend.com/css-stacked-cards/ -->
+    <div class="flex justify-content-center card-stack">
+      <skill-card2 *ngFor="let skill of dataService.skillCategories[2].skills"
+                  [name]="skill.name" [percent]="skill.rating" [description]="skill.text"
+      [style]="{'position': 'relative'}"></skill-card2>
+    </div>
+
+
+
+
+    <!--    <p (mouseover)="overlay.show($event)" (mouseleave)="overlay.hide()">HIER</p>-->
+<!--    <p-overlayPanel #overlay>-->
+<!--      TEST-->
+<!--    </p-overlayPanel>-->
+  </div>
+</main>
