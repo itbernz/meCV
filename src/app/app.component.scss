@@ -1,0 +1,84 @@
+@use 'style/language';
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+  backdrop-filter: blur(10px) brightness(90%);
+  -webkit-mask: linear-gradient(black, black 40%, transparent);
+}
+
+#main-heading {
+  color: #ffffff;
+  font-size: 7vw;
+  letter-spacing: 1.5vw;
+  font-weight: 10;
+  font-family: Copperplate Gothic, serif;
+  margin-bottom: 3vh;
+  @media (max-aspect-ratio: 1/1) {
+    font-size: 9vw;
+    letter-spacing: 1.6vw;
+  }
+}
+
+#main-subheading {
+  @extend #main-heading;
+  font-size: 1.5vw;
+  letter-spacing: 0.5vw;
+  font-style: italic;
+  transform: translateX(-20vw);
+  @media (max-aspect-ratio: 1/1) {
+    font-size: 3vw;
+    letter-spacing: 0.6vw;
+  }
+}
+
+:host ::ng-deep {
+
+  .p-timeline-event-separator {
+    transform: translateY(calc((2.25rem - 1.6rem) / 2));
+    .dot {
+      height: 1.6rem;
+      width: 1.6rem;
+      background-color: #ffffff;
+      border-radius: 50%;
+      border: 3px solid rgba(75,75,75,1);
+      display: inline-block;
+    }
+  }
+
+  .timeline-date-light {
+    background: var(--background-light);
+    border: var(--border-dark);
+    color: #4B5563;
+  }
+
+  .timeline-date-dark {
+    background: var(--background-dark);
+    border: var(--border-light);
+  }
+
+  .p-menuitem-link {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  .p-steps-title {
+    color: white;
+    padding: 0 20px;
+    text-shadow: 1px  1px 1px #4b5563,
+    1px -1px 1px #4b5563,
+    -1px  1px 1px #4b5563,
+    -1px -1px 1px #4b5563;
+  }
+
+  .p-steps-item::before {
+    border-top: 3px solid #e5e7eb;
+    //outline: 3px solid rgb(218, 218, 218);
+  }
+
+  .p-steps .p-steps-item.p-highlight .p-steps-number {
+    background: #919191;
+    color: white;
+  }
+}
